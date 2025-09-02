@@ -7,4 +7,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+Hi! I can't introduce myself here as this is an anonymized version of the original website I created to complement and summarize the final project of my Master's in Bioinformatics and Biostatistics of Universitat Oberta de Catalunya: ***"Implementation of a bioinformatics pipeline for the analysis of spatial transcriptomics data"*****.**   
