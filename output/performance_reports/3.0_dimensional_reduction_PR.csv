@@ -1,0 +1,14 @@
+"Chunk,""Time_sec"",""Memory_Mb"""
+Libraries,2.63,147
+LoadData,5.65,1193.4
+PCA,11.04,20.1
+VizPCA1,0.51,11.5
+VizPCA2,1.66,7.8
+VizPCA3,1.64,6.3
+ElbowMetrics,0.39,1.1
+ElbowPCA,0.34,0.6
+UMAP,65.11,3.6
+VizUMAP1,1.85,7.3
+VizUMAP2,3.71,17.4
+SavingSeuObj,41.29,0
+Total,135.82,1416.1
