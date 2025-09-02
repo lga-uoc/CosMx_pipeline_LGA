@@ -1,4 +1,4 @@
-"Chunk,""Time_sec"",""Memory_Mb"""
+Chunk,Time_sec,Memory_Mb
 Libraries,2.13,146.8
 LoadData,1.93,427
 VizFOV,2.09,23.6

@@ -1,4 +1,4 @@
-"Chunk,""Time_sec"",""Memory_Mb"""
+Chunk,Time_sec,Memory_Mb
 Libraries,3.23,147
 LoadData,3.9,772.8
 PCA,23.04,20.1

@@ -1,4 +1,4 @@
-"Chunk,""Time_sec"",""Memory_Mb"""
+Chunk,Time_sec,Memory_Mb
 Libraries,7.6,457.1
 LoadData,6.73,1215.1
 PrepData,0.69,205.4
