@@ -48,7 +48,7 @@ With the goal of creating a flexible pipeline, the documents have been parameter
 3.  [Dimensional reduction](3.0_dimensional_reduction.html)
 4.  [Cell typing](4.0_insitutype_cell_typing.html)
 
-## Total time and memory
+## Total time and memory usage
 
 ```{r Libraries, include = FALSE}
 library(data.table) # Efficient data management
