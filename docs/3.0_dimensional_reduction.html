@@ -469,7 +469,7 @@ div.tocify {
   <a href="license.html">License</a>
 </li>
 <li>
-  <a href="https://github.com/lidiaga/CosMx_pipeline_LGA">
+  <a href="https://github.com/lga-uoc/CosMx_pipeline_LGA">
     <span class="fab fa-github"></span>
      
     Source code
@@ -486,7 +486,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">CosMx Data Dimensional reduction</h1>
 <h4 class="author">LGA</h4>
-<h4 class="date">02 septiembre 2025</h4>
+<h4 class="date">03 septiembre 2025</h4>
 
 </div>
 
@@ -515,7 +515,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-09-02
+<strong>Last updated:</strong> 2025-09-03
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -646,13 +646,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong9bc387c">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomlgauocCosMxpipelineLGAtreecc8470c609588ae6794c96ed3c178f92b6f9c1fdtargetblankcc8470ca">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 9bc387c
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/tree/cc8470c609588ae6794c96ed3c178f92b6f9c1fd" target="_blank">cc8470c</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong9bc387c"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomlgauocCosMxpipelineLGAtreecc8470c609588ae6794c96ed3c178f92b6f9c1fdtargetblankcc8470ca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -661,7 +663,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 9bc387c.
+The results in this page were generated with repository version
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/tree/cc8470c609588ae6794c96ed3c178f92b6f9c1fd" target="_blank">cc8470c</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -680,7 +683,9 @@ Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    NBClust-Plots/
     Ignored:    analysis/.Rhistory
-    Ignored:    data/seuAtoMx/
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_exprMat_file.csv
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_fov_positions_file.csv
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_metadata_file.csv
     Ignored:    output/processed_data/Log/
     Ignored:    output/processed_data/RC/
     Ignored:    output/processed_data/SCT/
@@ -691,12 +696,20 @@ Ignored files:
     Ignored:    output/processed_data/seu_filtered.RDS
     Ignored:    output/processed_data/seu_semifiltered.RDS
 
-Untracked files:
-    Untracked:  output/performance_reports/
-
 Unstaged changes:
     Modified:   CosMx_pipeline_LGA.Rproj
-    Modified:   _workflowr.yml
+    Modified:   output/performance_reports/0.0_data_loading_PR.csv
+    Modified:   output/performance_reports/1.0_qc_and_filtering_PR.csv
+    Modified:   output/performance_reports/2.0_normalization_PR.csv
+    Deleted:    output/performance_reports/3.0_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/4.0_insitutype_cell_typing_PR.csv
+    Deleted:    output/performance_reports/4.1_insitutype_unsup_clustering_PR.csv
+    Deleted:    output/performance_reports/4.2_seurat_unsup_clustering_PR.csv
+    Deleted:    output/performance_reports/5.0_RC_normalization_PR.csv
+    Deleted:    output/performance_reports/5.1_RC_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/6.0_Log_normalization_PR.csv
+    Deleted:    output/performance_reports/6.1_Log_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/pipeline_PR.csv
 
 </code></pre>
 <p>
@@ -744,10 +757,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/lga-uoc/CosMx_pipeline_LGA/43970ac7eece0aded282c805767d439617b6a2a0/docs/3.0_dimensional_reduction.html" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-78c8449
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/78c8449fe685bde2d835ac647c9135d949e8d3e2/analysis/3.0_dimensional_reduction.Rmd" target="_blank">78c8449</a>
 </td>
 <td>
 lga-uoc
@@ -839,8 +869,45 @@ PC_ 5
 Positive:  Ptgds, Hexb, C1qc, Csf1r, C1qa 
 Negative:  Cldn5, Mbp, Slc2a1, Itm2a, Flt1 </code></pre>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">VizDimLoadings</span>(seu, <span class="at">dims =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">reduction =</span> <span class="st">&#39;pca&#39;</span>)</span></code></pre></div>
-<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA1-1.png" width="576" style="display: block; margin: auto;" />
-The loadings for each PC show which genes are driving the variance in
+<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA1-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizPCA1-1">
+Past versions of VizPCA1-1.png
+</button>
+</p>
+<div id="fig-VizPCA1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/VizPCA1-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>The loadings for each PC show which genes are driving the variance in
 the data along that axis. In this case, for example, cells with a high
 score for PC 1 would have a higher expression of genes like Snap25,
 Atp1b1, Penk, Meg3, Nrgn, while cells with a lower score for PC 1, would
@@ -857,8 +924,45 @@ the resulted PCs are “DimPlot()”, “DimHeatmap()” and “ElbowPlot()”:<
 <span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;PCA DimPlot&quot;</span>) <span class="sc">+</span></span>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">NoLegend</span>()</span></code></pre></div>
-<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA2-1.png" width="384" style="display: block; margin: auto;" />
-In this plot, cells that are far from each other in the X-axis (PC 1)
+<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA2-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizPCA2-1">
+Past versions of VizPCA2-1.png
+</button>
+</p>
+<div id="fig-VizPCA2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/VizPCA2-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>In this plot, cells that are far from each other in the X-axis (PC 1)
 are more different than cells separated the same distance in the Y-axis
 (PC 2). In this case, no clear differentiations are observed.</p>
 </div>
@@ -884,8 +988,45 @@ are more different than cells separated the same distance in the Y-axis
 <span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a>    <span class="at">theme =</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span>
 <span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>    ) <span class="sc">&amp;</span></span>
 <span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;right&quot;</span>)</span></code></pre></div>
-<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA3-1.png" width="1440" style="display: block; margin: auto;" />
-This type of plots represent cells (ranked through its PC score) in
+<p><img src="figure/3.0_dimensional_reduction.Rmd/VizPCA3-1.png" width="1440" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizPCA3-1">
+Past versions of VizPCA3-1.png
+</button>
+</p>
+<div id="fig-VizPCA3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/VizPCA3-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>This type of plots represent cells (ranked through its PC score) in
 columns and genes (top loadings) in rows, the color in each intersection
 represents the expression level of the gene in the cell. By setting the
 “cells” parameter to a number, such as 500, the plot only shows the most
@@ -929,8 +1070,45 @@ Chan Bioinformatics Core (HBC) scRNA-seq trainning</a>).</p>
 <span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> m2, <span class="at">y =</span> <span class="dv">10</span>, <span class="at">label =</span> <span class="st">&quot;m2&quot;</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Elbow Plot Metrics&quot;</span>) <span class="sc">+</span></span>
 <span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
-<p><img src="figure/3.0_dimensional_reduction.Rmd/ElbowMetrics-1.png" width="864" style="display: block; margin: auto;" />
-In this case, the elbow might be observed around 15-25 PCs and the
+<p><img src="figure/3.0_dimensional_reduction.Rmd/ElbowMetrics-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-ElbowMetrics-1">
+Past versions of ElbowMetrics-1.png
+</button>
+</p>
+<div id="fig-ElbowMetrics-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/ElbowMetrics-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>In this case, the elbow might be observed around 15-25 PCs and the
 calculated metrics are found in PCs 40 or 22 PCs. In the HBC training,
 they suggest selecting the lower those metrics. However, it is usually
 preferable to err on the higher side, so an intermediate value, like 30
@@ -949,6 +1127,43 @@ number of selected PCs will be 50.</p>
 <span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Elbow Plot&quot;</span>) <span class="sc">+</span></span>
 <span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span></code></pre></div>
 <p><img src="figure/3.0_dimensional_reduction.Rmd/ElbowPCA-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-ElbowPCA-1">
+Past versions of ElbowPCA-1.png
+</button>
+</p>
+<div id="fig-ElbowPCA-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/ElbowPCA-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="umap" class="section level1">
@@ -968,8 +1183,45 @@ from the selected PCs previously calculated.</p>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="co"># UMAP DimPlot</span></span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="fu">DimPlot</span>(seu, <span class="at">reduction =</span> <span class="st">&quot;umap&quot;</span>, <span class="at">cols =</span> <span class="st">&quot;stepped&quot;</span>, <span class="at">raster =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">NoLegend</span>()</span></code></pre></div>
-<p><img src="figure/3.0_dimensional_reduction.Rmd/VizUMAP1-1.png" width="384" style="display: block; margin: auto;" />
-Currently, no clusters have been calculated, so every cell is
+<p><img src="figure/3.0_dimensional_reduction.Rmd/VizUMAP1-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizUMAP1-1">
+Past versions of VizUMAP1-1.png
+</button>
+</p>
+<div id="fig-VizUMAP1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/VizUMAP1-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Currently, no clusters have been calculated, so every cell is
 represented as part of one same group. However, at this point, UMAP
 plotting can still be useful to visualize how are cells distributed
 based on different variables, such as tissue (if there is more than one
@@ -1009,6 +1261,43 @@ counts or stains of interest.</p>
 <span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a><span class="co"># Arrange plots</span></span>
 <span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a>p3 <span class="sc">|</span> p4</span></code></pre></div>
 <p><img src="figure/3.0_dimensional_reduction.Rmd/VizUMAP2-1.png" width="1440" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizUMAP2-1">
+Past versions of VizUMAP2-1.png
+</button>
+</p>
+<div id="fig-VizUMAP2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/3.0_dimensional_reduction.Rmd/VizUMAP2-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>This type is visualizations would help to determine if any technical
 factor is influencing the data, i.e. batch effect related to the cells
 being in different slides.</p>
@@ -1050,10 +1339,10 @@ Memory_Mb
 Libraries
 </td>
 <td style="text-align:right;">
-1.50
+1.48
 </td>
 <td style="text-align:right;">
-148.8
+148.9
 </td>
 </tr>
 <tr>
@@ -1061,10 +1350,10 @@ Libraries
 LoadData
 </td>
 <td style="text-align:right;">
-4.16
+4.04
 </td>
 <td style="text-align:right;">
-1193.3
+1193.5
 </td>
 </tr>
 <tr>
@@ -1072,10 +1361,10 @@ LoadData
 PCA
 </td>
 <td style="text-align:right;">
-10.55
+7.02
 </td>
 <td style="text-align:right;">
-20.1
+19.9
 </td>
 </tr>
 <tr>
@@ -1083,10 +1372,10 @@ PCA
 VizPCA1
 </td>
 <td style="text-align:right;">
-0.48
+0.35
 </td>
 <td style="text-align:right;">
-11.5
+11.6
 </td>
 </tr>
 <tr>
@@ -1094,7 +1383,7 @@ VizPCA1
 VizPCA2
 </td>
 <td style="text-align:right;">
-2.60
+1.32
 </td>
 <td style="text-align:right;">
 8.0
@@ -1105,10 +1394,10 @@ VizPCA2
 VizPCA3
 </td>
 <td style="text-align:right;">
-1.79
+1.07
 </td>
 <td style="text-align:right;">
-6.3
+6.1
 </td>
 </tr>
 <tr>
@@ -1116,7 +1405,7 @@ VizPCA3
 ElbowMetrics
 </td>
 <td style="text-align:right;">
-0.36
+0.25
 </td>
 <td style="text-align:right;">
 1.0
@@ -1127,7 +1416,7 @@ ElbowMetrics
 ElbowPCA
 </td>
 <td style="text-align:right;">
-0.32
+0.24
 </td>
 <td style="text-align:right;">
 0.7
@@ -1138,10 +1427,10 @@ ElbowPCA
 UMAP
 </td>
 <td style="text-align:right;">
-113.12
+47.84
 </td>
 <td style="text-align:right;">
-3.5
+3.6
 </td>
 </tr>
 <tr>
@@ -1149,10 +1438,10 @@ UMAP
 VizUMAP1
 </td>
 <td style="text-align:right;">
-2.63
+1.42
 </td>
 <td style="text-align:right;">
-7.3
+7.2
 </td>
 </tr>
 <tr>
@@ -1160,7 +1449,7 @@ VizUMAP1
 VizUMAP2
 </td>
 <td style="text-align:right;">
-5.82
+2.93
 </td>
 <td style="text-align:right;">
 17.4
@@ -1171,7 +1460,7 @@ VizUMAP2
 SavingSeuObj
 </td>
 <td style="text-align:right;">
-51.02
+33.15
 </td>
 <td style="text-align:right;">
 0.0
@@ -1182,7 +1471,7 @@ SavingSeuObj
 Total
 </td>
 <td style="text-align:right;">
-194.35
+101.11
 </td>
 <td style="text-align:right;">
 1417.9

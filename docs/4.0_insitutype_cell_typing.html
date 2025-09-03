@@ -469,7 +469,7 @@ div.tocify {
   <a href="license.html">License</a>
 </li>
 <li>
-  <a href="https://github.com/lidiaga/CosMx_pipeline_LGA">
+  <a href="https://github.com/lga-uoc/CosMx_pipeline_LGA">
     <span class="fab fa-github"></span>
      
     Source code
@@ -487,7 +487,7 @@ div.tocify {
 <h1 class="title toc-ignore">CosMx Data Insitutype Supervised Cell
 typing</h1>
 <h4 class="author">LGA</h4>
-<h4 class="date">02 septiembre 2025</h4>
+<h4 class="date">03 septiembre 2025</h4>
 
 </div>
 
@@ -516,7 +516,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2025-09-02
+<strong>Last updated:</strong> 2025-09-03
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -647,13 +647,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong9bc387c">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomlgauocCosMxpipelineLGAtreecc8470c609588ae6794c96ed3c178f92b6f9c1fdtargetblankcc8470ca">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 9bc387c
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/tree/cc8470c609588ae6794c96ed3c178f92b6f9c1fd" target="_blank">cc8470c</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong9bc387c"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomlgauocCosMxpipelineLGAtreecc8470c609588ae6794c96ed3c178f92b6f9c1fdtargetblankcc8470ca"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -662,7 +664,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 9bc387c.
+The results in this page were generated with repository version
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/tree/cc8470c609588ae6794c96ed3c178f92b6f9c1fd" target="_blank">cc8470c</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -681,7 +684,9 @@ Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    NBClust-Plots/
     Ignored:    analysis/.Rhistory
-    Ignored:    data/seuAtoMx/
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_exprMat_file.csv
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_fov_positions_file.csv
+    Ignored:    data/flatFiles/CoronalHemisphere/Run1000_S1_Half_metadata_file.csv
     Ignored:    output/processed_data/Log/
     Ignored:    output/processed_data/RC/
     Ignored:    output/processed_data/SCT/
@@ -692,12 +697,20 @@ Ignored files:
     Ignored:    output/processed_data/seu_filtered.RDS
     Ignored:    output/processed_data/seu_semifiltered.RDS
 
-Untracked files:
-    Untracked:  output/performance_reports/
-
 Unstaged changes:
     Modified:   CosMx_pipeline_LGA.Rproj
-    Modified:   _workflowr.yml
+    Modified:   output/performance_reports/0.0_data_loading_PR.csv
+    Modified:   output/performance_reports/1.0_qc_and_filtering_PR.csv
+    Modified:   output/performance_reports/2.0_normalization_PR.csv
+    Modified:   output/performance_reports/3.0_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/4.0_insitutype_cell_typing_PR.csv
+    Deleted:    output/performance_reports/4.1_insitutype_unsup_clustering_PR.csv
+    Deleted:    output/performance_reports/4.2_seurat_unsup_clustering_PR.csv
+    Deleted:    output/performance_reports/5.0_RC_normalization_PR.csv
+    Deleted:    output/performance_reports/5.1_RC_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/6.0_Log_normalization_PR.csv
+    Deleted:    output/performance_reports/6.1_Log_dimensional_reduction_PR.csv
+    Deleted:    output/performance_reports/pipeline_PR.csv
 
 </code></pre>
 <p>
@@ -745,10 +758,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/lga-uoc/CosMx_pipeline_LGA/43970ac7eece0aded282c805767d439617b6a2a0/docs/4.0_insitutype_cell_typing.html" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-78c8449
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/78c8449fe685bde2d835ac647c9135d949e8d3e2/analysis/4.0_insitutype_cell_typing.Rmd" target="_blank">78c8449</a>
 </td>
 <td>
 lga-uoc
@@ -950,6 +980,43 @@ matrix.</p>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co"># Heatmap of reference profile</span></span>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">pheatmap</span>(<span class="fu">sweep</span>(refprofiles, <span class="dv">1</span>, <span class="fu">pmax</span>(<span class="fu">apply</span>(refprofiles, <span class="dv">1</span>, max), <span class="fl">0.2</span>), <span class="st">&quot;/&quot;</span>), <span class="at">col =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;white&quot;</span>, <span class="st">&quot;darkblue&quot;</span>))(<span class="dv">100</span>))</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/VizRef-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizRef-1">
+Past versions of VizRef-1.png
+</button>
+</p>
+<div id="fig-VizRef-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/VizRef-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="supervised-insitutype-classification" class="section level1">
 <h1>Supervised InSituType classification</h1>
@@ -1042,6 +1109,43 @@ selected.</p>
 <span id="cb16-19"><a href="#cb16-19" tabindex="-1"></a><span class="co"># Arrange plots</span></span>
 <span id="cb16-20"><a href="#cb16-20" tabindex="-1"></a>p1 <span class="sc">|</span> p2</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/VizSupProb-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizSupProb-1">
+Past versions of VizSupProb-1.png
+</button>
+</p>
+<div id="fig-VizSupProb-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/VizSupProb-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>All clusters have an average probability of more than 75%, although
 many outliers are observed. Finally, there are 885 (1.8 %) cells with an
 assignment confidence of less than 75 %, showing that most of the cells
@@ -1064,6 +1168,43 @@ assignation.</p>
 <span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a><span class="fu">flightpath_plot</span>(<span class="at">insitutype_result =</span> sup,</span>
 <span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a>                <span class="at">col =</span> cols[sup<span class="sc">$</span>clust])</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/VizFPSup-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizFPSup-1">
+Past versions of VizFPSup-1.png
+</button>
+</p>
+<div id="fig-VizFPSup-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/VizFPSup-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>As before, it can be seen that all clusters are very well defined,
 with average probabilities of nearly 100%.</p>
 </div>
@@ -1162,6 +1303,43 @@ visualization.</p>
 <span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a><span class="co"># DimPlot of selected resolution</span></span>
 <span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a><span class="fu">DimPlot</span>(seu, <span class="at">reduction =</span> <span class="st">&quot;umap&quot;</span>, <span class="at">label =</span> <span class="cn">FALSE</span>, <span class="at">cols =</span> cols, <span class="at">raster =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/VizAnn1-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizAnn1-1">
+Past versions of VizAnn1-1.png
+</button>
+</p>
+<div id="fig-VizAnn1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/VizAnn1-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Finally, the visualization of nFeature and nCount allows to identify
 clusters with better/lower representation by the CosMx panel.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="do">## Code adapted from CosMxLite vignette</span></span>
@@ -1172,6 +1350,43 @@ clusters with better/lower representation by the CosMx panel.</p>
 <span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>        <span class="at">group.by =</span> <span class="st">&quot;IST_sup_ann_refined&quot;</span>) <span class="sc">&amp;</span></span>
 <span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">size =</span> <span class="dv">8</span>))</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/VizAnn2-1.png" width="960" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-VizAnn2-1">
+Past versions of VizAnn2-1.png
+</button>
+</p>
+<div id="fig-VizAnn2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/VizAnn2-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="save-the-seurat-object" class="section level2">
 <h2>Save the Seurat object</h2>
@@ -1199,6 +1414,43 @@ specifically highlighted:</p>
 <span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a><span class="co"># Arrange plots</span></span>
 <span id="cb23-12"><a href="#cb23-12" tabindex="-1"></a>p1 <span class="sc">+</span> p2</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/SpatialViz-1.png" width="3900" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-SpatialViz-1">
+Past versions of SpatialViz-1.png
+</button>
+</p>
+<div id="fig-SpatialViz-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/SpatialViz-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Another interesting visualization would be to plot gene expression
 markers in its spatial context. For example, one typical maker for
 Oligodendrocytes is <em>Olig1</em>:</p>
@@ -1206,8 +1458,45 @@ Oligodendrocytes is <em>Olig1</em>:</p>
 <span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="do">## Points are removed from violin plots as CosMx datasets can contain over 1 million cells and may hide the violin plot</span></span>
 <span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a></span>
 <span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a><span class="fu">VlnPlot</span>(seu, <span class="at">features =</span> <span class="st">&quot;Olig1&quot;</span>,<span class="at">pt.size =</span> <span class="dv">0</span>, <span class="at">y.max =</span> <span class="dv">20</span>) <span class="sc">+</span> <span class="fu">NoLegend</span>()</span></code></pre></div>
-<p><img src="figure/4.0_insitutype_cell_typing.Rmd/MarkerViz1-1.png" width="672" style="display: block; margin: auto;" />
-As expected, it is highly expressed in Oligodendrocytes and
+<p><img src="figure/4.0_insitutype_cell_typing.Rmd/MarkerViz1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-MarkerViz1-1">
+Past versions of MarkerViz1-1.png
+</button>
+</p>
+<div id="fig-MarkerViz1-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/MarkerViz1-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As expected, it is highly expressed in Oligodendrocytes and
 Oligodendrocyte precursor cells, but it can also be observed in its
 spatial context:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="do">## Code adapted from CosMxLite vignette</span></span>
@@ -1228,6 +1517,43 @@ spatial context:</p>
 <span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a><span class="co"># Arrange plots</span></span>
 <span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a>p1 <span class="sc">+</span> p2</span></code></pre></div>
 <p><img src="figure/4.0_insitutype_cell_typing.Rmd/SpatialViz2-1.png" width="3900" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-SpatialViz2-1">
+Past versions of SpatialViz2-1.png
+</button>
+</p>
+<div id="fig-SpatialViz2-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/lga-uoc/CosMx_pipeline_LGA/blob/43970ac7eece0aded282c805767d439617b6a2a0/docs/figure/4.0_insitutype_cell_typing.Rmd/SpatialViz2-1.png" target="_blank">43970ac</a>
+</td>
+<td>
+lga-uoc
+</td>
+<td>
+2025-09-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="performance-and-session-info" class="section level1">
 <h1>Performance and Session Info</h1>
@@ -1255,7 +1581,7 @@ Memory_Mb
 Libraries
 </td>
 <td style="text-align:right;">
-4.49
+5.17
 </td>
 <td style="text-align:right;">
 459.0
@@ -1266,10 +1592,10 @@ Libraries
 LoadData
 </td>
 <td style="text-align:right;">
-5.13
+5.11
 </td>
 <td style="text-align:right;">
-1215.1
+1215.0
 </td>
 </tr>
 <tr>
@@ -1277,7 +1603,7 @@ LoadData
 PrepData
 </td>
 <td style="text-align:right;">
-0.38
+0.37
 </td>
 <td style="text-align:right;">
 205.5
@@ -1288,7 +1614,7 @@ PrepData
 PrepCohort
 </td>
 <td style="text-align:right;">
-7.04
+7.15
 </td>
 <td style="text-align:right;">
 2.6
@@ -1299,10 +1625,10 @@ PrepCohort
 LoadRef
 </td>
 <td style="text-align:right;">
-0.65
+0.89
 </td>
 <td style="text-align:right;">
-0.9
+1.0
 </td>
 </tr>
 <tr>
@@ -1310,7 +1636,7 @@ LoadRef
 ExploringFOVpositions
 </td>
 <td style="text-align:right;">
-0.29
+0.28
 </td>
 <td style="text-align:right;">
 0.1
@@ -1332,7 +1658,7 @@ VizRef
 Sup
 </td>
 <td style="text-align:right;">
-654.56
+647.48
 </td>
 <td style="text-align:right;">
 63.5
@@ -1343,7 +1669,7 @@ Sup
 SupProb
 </td>
 <td style="text-align:right;">
-0.33
+0.31
 </td>
 <td style="text-align:right;">
 0.2
@@ -1354,7 +1680,7 @@ SupProb
 ExporingSupProb
 </td>
 <td style="text-align:right;">
-0.32
+0.31
 </td>
 <td style="text-align:right;">
 0.0
@@ -1365,7 +1691,7 @@ ExporingSupProb
 VizSupProb
 </td>
 <td style="text-align:right;">
-3.84
+3.97
 </td>
 <td style="text-align:right;">
 13.6
@@ -1376,7 +1702,7 @@ VizSupProb
 VizFPSup
 </td>
 <td style="text-align:right;">
-3.46
+3.66
 </td>
 <td style="text-align:right;">
 12.8
@@ -1387,10 +1713,10 @@ VizFPSup
 RefinedSup
 </td>
 <td style="text-align:right;">
-1.45
+1.46
 </td>
 <td style="text-align:right;">
-8.3
+8.2
 </td>
 </tr>
 <tr>
@@ -1398,7 +1724,7 @@ RefinedSup
 AddAnn
 </td>
 <td style="text-align:right;">
-0.36
+0.35
 </td>
 <td style="text-align:right;">
 1.0
@@ -1412,7 +1738,7 @@ VizAnn1
 1.62
 </td>
 <td style="text-align:right;">
-5.5
+5.7
 </td>
 </tr>
 <tr>
@@ -1420,7 +1746,7 @@ VizAnn1
 VizAnn2
 </td>
 <td style="text-align:right;">
-0.93
+0.94
 </td>
 <td style="text-align:right;">
 4.8
@@ -1431,7 +1757,7 @@ VizAnn2
 SavingSeuObj
 </td>
 <td style="text-align:right;">
-33.73
+33.57
 </td>
 <td style="text-align:right;">
 0.0
@@ -1442,7 +1768,7 @@ SavingSeuObj
 SpatialViz
 </td>
 <td style="text-align:right;">
-3.60
+3.55
 </td>
 <td style="text-align:right;">
 13.0
@@ -1453,7 +1779,7 @@ SpatialViz
 MarkerViz1
 </td>
 <td style="text-align:right;">
-0.66
+0.70
 </td>
 <td style="text-align:right;">
 3.2
@@ -1464,7 +1790,7 @@ MarkerViz1
 SpatialViz2
 </td>
 <td style="text-align:right;">
-3.67
+3.76
 </td>
 <td style="text-align:right;">
 8.8
@@ -1475,10 +1801,10 @@ SpatialViz2
 Total
 </td>
 <td style="text-align:right;">
-727.21
+721.35
 </td>
 <td style="text-align:right;">
-2024.0
+2024.1
 </td>
 </tr>
 </tbody>
