@@ -269,7 +269,7 @@ wflow_publish("analysis/pipeline.Rmd",
 # Add this document to the project directory ------------------------------
 
 wflow_status() # Check status
-wflow_git_commit("workflowr_project_setup.R",,
+wflow_git_commit("workflowr_project_setup.R",
                  message = "Include workflowr_project_setup.R script to the project directory")
 
 
