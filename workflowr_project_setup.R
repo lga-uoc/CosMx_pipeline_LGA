@@ -275,7 +275,7 @@ wflow_git_commit("workflowr_project_setup.R",,
 
 # Link local repo to remote GitHub repo -----------------------------------
 
-wflow_use_github() # Creates remote repo and links GitHub account
+wflow_use_github("lga-uoc") # Creates remote repo and links GitHub account
 system("git push -u origin master") # Push local repo to remote repo
 
 
